@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>MEMORIES ONLINE</title>
+</head>
+<body>
+    <main id="main">
+        <div id="sl">
+            <div id="serverlist">
+                <div class="col">Server Name</div>
+                <div class="col">Game Type</div>
+                <div class="col">Players</div>
+            </div>
+        </div>
+        <p id="instruction">Clic on one of "ServerName" column to Join.</p>
+        <div id="paction">
+            <div id="newserver">
+                <label for="newservername">Create server:</label>
+                <input type="text" id="newservername" placeholder="Server Name">
+                <button id="startserver" onclick="sumitserver()" >Start server</button>
+            </div>
+            <div id="pname">
+                <p id="username">Your name:</p>
+            </div>
+        </div>
+    </main>
+    <footer style="display: none;">
+    </footer>
+    <div id="backpanel" style="display: none;">
+        <div id="formname" >
+            <input type="text" id="usernameinput" placeholder="Enter your name">
+        </div>
+    </div>
+</body>
+<script src="../static/js/cookie.js"></script>
+<script src="../static/js/log.js"></script>
+<script src="../static/js/serverlist.js"></script>
+<script src="../static/js/newserver.js"></script>
+<script src="../static/js/gamemanager.js"></script>
+<script src="../static/js/game.js"></script>
+</html>

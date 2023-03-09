@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    background: url("../img/background.jpg");
+}
+
+@font-face {
+    font-family: catfont;
+    src: url("../font/austie-bost-kitten-klub.regular.ttf");
+}

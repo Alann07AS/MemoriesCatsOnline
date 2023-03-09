@@ -1,0 +1,529 @@
+body {
+    margin: 0;
+    background: url("../img/background.jpg");
+    /* background-size: cover; */
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 100vh;
+    width: 90%;
+    /*! justify-content: center; */
+    align-items: center;
+    font-family: catfont;
+    font-weight: 900;
+    overflow: hidden;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    font-family: catfont;
+    font-size: 20px;
+    color: #fff;
+    background: url("../img/boneboutton.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /*! padding: 0%; */
+    margin: 1%;
+    height: 15%;
+    width: 45%;
+    /*! padding: 3%; */
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    min-width: 150px;
+    font-weight: 900;
+}
+footer div p {
+    margin:  3px;
+}
+
+footer div {
+    text-align: center;
+    height: auto;
+    width: 86%;
+    height: 48%;
+    top: -8%;
+    position: relative;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: catfont;
+    src: url("../font/austie-bost-kitten-klub.regular.ttf");
+}
+
+#backpanel {
+    width: 100vw; height: 100vh; 
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    position:fixed;
+    justify-content: center;   
+    align-items: center;
+}
+
+#formname {
+    background: url("../img/nameInfo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vw;
+    max-height: 475px;
+    width: 100%;
+    margin: 10px;
+    max-width: 475px;
+
+    display: flex;
+    flex-direction: column;
+    top: 12%;
+    position: fixed;
+}
+@media (min-width: 600px) {
+    #formname {
+        top: auto;
+    }
+}
+
+@media (max-height: 600px) {
+    #backpanel {
+        justify-content: left;
+    }
+    #formname {
+        max-height: 100vh;
+        top: 0;
+        left: 0;
+        max-width: 50vw !important;;
+    }
+    #formname > input {
+        top: 0 !important;
+        transform: translate(100%, 150%);
+    }
+}
+
+#formname > input {
+    align-self: center;
+    top: -25%;
+    height: 15%;
+    width: 79%;
+    border-radius: 100%;
+    position: relative;
+    color: rgb(240, 142, 31);
+    border: none;
+    outline: none;
+    font-size: 190%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background: white;
+    background-size:87%;
+    animation: inputtext 3s;
+}
+#formname > input::placeholder {
+    color: rgba(240, 142, 31, 0.4);
+    opacity: 1;
+}
+
+#formname > * {
+    text-align: center;
+    margin: 5px;
+}
+
+#valid {
+    background: url("../img/boneboutton.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-size: 100% 100%;
+    height: 24%;
+    width: 39%;
+    position: relative;
+    left: 22%;
+    top: -7%;
+    transform: rotate(7deg);
+    max-width: 212px;
+    max-height: 113px;
+    font-family: catfont;
+    font-weight: 900;
+    color: aliceblue;
+    font-size: 149%;
+}
+
+#valid:hover {
+    filter: brightness(1.3);
+    filter: drop-shadow(6px 3px 10px black);
+    transform: scale(110%);
+}
+
+/* @keyframes inputtext {
+    0%, 100% {
+      transform: translate(-25px,-20px);
+    }
+    50% {
+      transform: translate(5px,5px);
+    }
+  } */
+
+#main, #mainsalon {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin: 3%;
+    width: 100%;
+    align-items: center;
+}
+
+#serverlist {
+    display: grid;
+    grid-template-columns: 50% 30% auto;
+    grid-template-rows: 10%;
+    padding: 1%;
+    height: auto;
+    overflow: auto;
+}
+
+.sname:hover {
+    background: red;
+}
+
+.lp {
+    background-color: whitesmoke;
+}
+
+.lip {
+    background-color: gray;
+}
+
+#sl, #salon {
+    background: rgba(255, 255, 255, 0.97);
+    background-size: cover;
+    border-radius: 12%;
+    border: solid;
+    width: 100%;
+    max-width: 700px;
+    height: 66%;
+}
+
+
+.col {
+    padding-left: 15%
+    
+}
+
+#salon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#username {
+    width: 100%;
+    color: black;
+    font-size: larger;
+    background: white;
+    padding: 6%;
+    border-radius: 5px;
+}
+
+#paction {
+    background-color: #ffe0e07a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 7px;
+    align-items: center;
+    margin: auto;
+}
+
+#instruction {
+    font-size: xx-large;
+    background: #ffffffdb;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+@media (max-width: 720px) { 
+    #paction {
+        flex-direction: column;
+    }
+}
+
+.serverimg {
+    display: flex;
+    flex-direction: column;
+    background: url("../img/server.jpg");
+    height: 100%;
+    width: 100%;
+    
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    background-size: 10%;
+    margin: 3%;
+    max-height: 240px;
+}
+
+#newserver {
+    display: flex;
+    flex-direction: column;
+    background: url("../img/server.jpg");
+    height: 100%;
+    width: 100%;
+    
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    background-size: 10%;
+    margin: 3%;
+    max-height: 240px;
+}
+
+#newserver > * {
+    margin: 5px;
+    font-size: 22px;
+    color: currentColor;
+    /*! background: #ffffffcf; */
+}
+
+#serverlist > li {
+    width: 100%;
+}
+
+
+#newservername {
+    width: 80%;
+}
+
+.slist {
+    display: ruby;
+    font-size: 24px;
+}
+.slist:hover {
+    display: ruby;
+    font-size: 25px;
+    font-weight: bold;
+    color: grey;
+}
+
+@media (max-width: 720px) {
+    .slist {
+        display: block;
+    }
+    .card {
+        grid-column-gap: 1%;
+    }
+}
+
+.readycase {
+    background: url('../img/readycase.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    width: 90px;
+    height: 90px;
+}
+
+.readyimg {
+    width: 90px;
+    height: 90px;
+    opacity: 0.9;
+}
+
+.pdiv {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#readybtm {
+    font-family: catfont;
+
+    font-size: large;
+    height: 10%;
+    width: 20%;
+    border-radius: 100px;
+}
+
+/* GAME CSS */
+
+
+@media (max-width: 700px) {
+    #maingame {
+        display: block;
+    }
+}
+
+#maingame {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#maingame > header {
+    top: 0;
+    width: 100%;
+    height: 10%;
+    background: green;
+}
+
+#plist, #board {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 2%;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(150px, 180px);
+}
+
+#plist {
+    width: 20%;
+    color: white;
+    font-size: large;
+    display: grid;
+    overflow: auto;
+}
+
+.player > * {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0D4612;
+    font-size: 22px;
+}
+
+.player {
+    background: url("../img/boneboutton.png");
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 19% 22% 22% 37%;
+}
+
+.name {
+    grid-row-start: 2;
+}
+
+.score {
+    grid-row-start: 3;
+}
+
+#board  {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 19%);
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 1%;
+
+}
+
+#gamescreen {
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    width: 100%;
+    background: #000000bd;
+}
+
+
+#salon {
+    position: relative;
+}
+
+#chrono {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.445);
+    color: #fff;
+    font-size: 800%;
+}
+
+.card {
+    background: url(../img/backcard.jpg) center/cover;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    background-size: contain;
+    /*! box-sizing: border-box; */
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 927px) {
+    .card {
+        width: 95%;
+    }
+}
+
+
+.case {
+    position: relative;
+    transition: transform 1000ms;
+    transform-style: preserve-3d;
+}
+.flip {
+    cursor: pointer;
+    transform: rotateX(180deg) ;
+    z-index: 3;
+}
+.front, .back {
+    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100%;
+    backface-visibility: hidden;
+}
+.back {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-100%) rotateX(180deg);
+}
+
+.back img {
+    height: 100%;
+    width: 84%;
+}
+
+.isPlay {
+    color: green;
+    filter: brightness(1.2);
+    animation-name: isplayanim;
+    animation-duration: 1.9s;
+    animation-iteration-count:  infinite;
+}
+
+@keyframes isplayanim {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.03);}
+    100% {transform: scale(1);}
+}

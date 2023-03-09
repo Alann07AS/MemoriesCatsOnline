@@ -1,0 +1,18 @@
+
+<body>
+    <main id="mainsalon">
+        <h3 id="servername"></h3>
+        <div id="salon">
+
+        </div>
+        <p id="instruction">Click on "Ready" button to start game.</p>
+        <input type="button" onclick="MessageOut.send(orderGO.TOGGLE_READY)" id="readybtm" value="READY">
+    </main>
+    <main id="maingame" style="display: none;">
+        <header>SERVERNAME</header>
+        <div id="gamescreen">
+            <div id="plist"></div>
+            <div id="board"></div>
+        </div>
+    </main>
+</body>
