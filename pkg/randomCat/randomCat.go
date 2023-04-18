@@ -8,10 +8,12 @@ import (
 	"time"
 )
 
+const APIurl = "https://api.thecatapi.com/v1/images/search"
+
 func GetXRandomCatImg(nb int) (table []string) {
 	for nb != 0 {
 		time.Sleep(50 * time.Millisecond)
-		r, err := http.Get("https://apilist.fun/out/randomcat")
+		r, err := http.Get(APIurl)
 		if err != nil {
 			fmt.Println("err:", err)
 		}
@@ -19,12 +21,12 @@ func GetXRandomCatImg(nb int) (table []string) {
 		if err != nil {
 			fmt.Println("err:", err)
 		}
-		f := Fille{}
+		f := make([]Fille, 1)
 		err = json.Unmarshal(content, &f)
 		if err != nil {
 			fmt.Println("err:", err)
 		}
-		table = append(table, f.File)
+		table = append(table, f[0].Url)
 		nb--
 	}
 	fmt.Println("GetCardFromAPIDone")
@@ -32,5 +34,5 @@ func GetXRandomCatImg(nb int) (table []string) {
 }
 
 type Fille struct {
-	File string
+	Url string `json:"url"`
 }
